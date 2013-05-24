@@ -1,0 +1,157 @@
+.ui-li-divider
+{
+	background-image:
+	-moz-linear-gradient(74% -5% -90deg,rgb(94,118,48) 0%,rgb(56,71,29) 99%);
+	background-image:
+	-webkit-gradient(linear,74% -5%,74% 98%,color-stop(0, rgb(94,118,48)),color-stop(0.99, rgb(56,71,29)));
+	background-image:
+	-webkit-linear-gradient(-90deg,rgb(94,118,48) 0%,rgb(56,71,29) 99%);
+	background-image:
+	-o-linear-gradient(-90deg,rgb(94,118,48) 0%,rgb(56,71,29) 99%);
+	background-image:-ms-linear-gradient(-90deg,rgb(94,118,48) 0%,rgb(56,71,29) 99%);
+	background-image:
+	linear-gradient(-90deg,rgb(94,118,48) 0%,rgb(56,71,29) 99%);
+	
+	text-shadow:0px -1px 1px rgb(0,0,0);
+	font-weight:bold;
+	color:rgb(255,255,255);
+}
+
+a:active, a:hover, a:link
+{
+	text-decoration: none;
+	color: #916800;
+}
+
+.ui-content
+{
+	background: url(../img/background.gif) left center no-repeat;
+}
+
+.ui-listview-inset
+{
+	margin: 1em !important;
+}
+.ui-listview-inset li
+{
+	background-color: rgba(204,172,88, .80) !important;
+	background-image: none !important;
+}
+
+.ui-li-heading, .ui-li-desc, .ui-btn-hover-p, .ui-btn-up-p, .ui-btn-down-p
+{
+	text-shadow: none !important;
+}
+
+.ui-li-heading, .ui-li-desc, .ui-btn-hover-p, .ui-btn-up-p {
+	color:#000 !important;
+}
+
+#parkNameList {
+	margin-right:auto;
+	margin-left:auto;
+	text-align: center;
+}
+
+.parkItem {
+	margin: 20px;
+	border: 1px solid #000;
+	padding: 10px;
+	width: 160px;
+	background-color: #fff;
+	-webkit-box-shadow:  4px 4px 4px 2px rgba(100, 100, 100, .3);
+       box-shadow:  0px 4px 4px 2px rgba(100, 100, 100, .3);
+	display:inline-block;
+}
+
+.parkItem img {
+	display: block;
+	margin: auto;
+}
+
+.parkItem h1 {
+	text-transform:uppercase;
+	color: rgb(71, 71, 71);
+	font-size: 1em;
+	margin-top: .2em;
+	margin-bottom: 0;
+	font-family: arial, helvetica, san-serif;
+	white-space: nowrap;
+	width: 100%;         
+	overflow: hidden;     
+	text-overflow: ellipsis;
+}
+.parkItem h2 {
+	text-transform:uppercase;
+	color: rgb(150, 150, 150);
+	font-size: 0.8em;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: arial, helvetica, san-serif;
+	white-space: nowrap;
+	width: 100%;         
+	overflow: hidden;     
+	text-overflow: ellipsis;
+}
+	
+
+#parkDetails
+{
+	padding: 0 !important;
+}
+
+#parkDetails p
+{
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	padding: .5em;
+}
+
+#parkDetails img
+{
+	width: 100%;
+	margin-bottom: 0;
+	display: block;
+}
+
+#parkDetails #parkMap
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	
+}
+
+#parkDetails #parkMap img
+{
+	width: auto;
+	padding: 10px;
+	background-color: #fff;
+	border: 2px solid #ccc;
+	box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.75);
+	display: inline-block;
+}
+
+#parkDetails h1
+{
+	margin: 0;
+	padding: .5em 1em;
+	background-color: RGBa(50,50,50,.5);
+	text-shadow: none !important;
+	color: #fff;
+}
+
+#parkDetails h2, h3
+{
+	font-size: 16px;
+	padding: .25em .5em;
+	margin-bottom: 0;
+}
+
+.npslogo
+{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

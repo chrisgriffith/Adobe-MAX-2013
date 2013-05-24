@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, target-densitydpi=device-dpi">
+	<meta name="format-detection" content="telephone-no">
+	<title>NPS Tablets</title>
+	<link rel="stylesheet"  href="css/jquery.mobile.structure.css">
+	<link rel="stylesheet"  href="css/nps.css">
+	<link rel="stylesheet"  href="css/style.css">
+	
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+        $(document).on("mobileinit", function () {
+ 			// Setting default page transition to slide
+        	$.mobile.defaultPageTransition = 'none';
+        });
+    </script>
+	<script src="js/mustache.js"></script>
+	<script src="js/npsdata.json"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/jquery.mobile.js"></script>
+</head>
+<body>
+	<section id="parkNamePage" data-role="page" data-theme="p">
+		<header data-role="header" data-position="fixed" data-id="appHeader" data-theme="p">
+			<h1>US National Parks</h1>
+			<a href="#about" data-role="button" data-transition="fade" data-icon="info" data-iconpos="notext" class="ui-btn-right">About</a>
+		</header>
+		<div id="parkNameList" data-role="content" data-theme="p">
+		</div>
+		
+	</section>
+
+	<section id="parkDetailsPage" data-role="page" data-theme="p">
+		<header data-role="header" data-position="fixed" data-id="appHeader" data-theme="p">
+			<h1>National Parks</h1>
+			<a href="#about" data-role="button" data-transition="fade" data-icon="info" data-iconpos="notext" class="ui-btn-right">About</a>
+		</header>
+		<div id="parkDetails" data-role="content">
+		</div>
+	</section>
+	
+	<section id="about" data-role="page" data-add-back-btn="true" data-theme="p">
+		<header data-role="header" data-position="fixed" data-id="appHeader" data-theme="p">
+			<h1>About This App</h1>
+		</header>
+		<div data-role="content">
+			<p>Since 1916, the American people have entrusted the National Park Service with the care of their national parks. With the help of volunteers and park partners, we are proud to safeguard these nearly 400 places and to share their stories with more than 275 million visitors every year. But our work doesn't stop there.</p>
+
+			<p>We are proud that tribes, local governments, nonprofit organizations, businesses, and individual citizens ask for our help in revitalizing their communities, preserving local history, celebrating local heritage, and creating close to home opportunities for kids and families to get outside, be active, and have fun.</p>
+			<img src="img/nps_logo.png" class="npslogo"/>
+			
+		</div>
+	</section>
+</body>
+</html>
