@@ -1,12 +1,27 @@
+var isConnected = true;
+
+// Wait for PhoneGap to load
+document.addEventListener("deviceready", onDeviceReady, false);
+
+// PhoneGap is loaded and it is now safe to make calls Cordova methods
+function onDeviceReady() {
+	checkConnection();
+}
+
+function checkConnection() {
+	var networkState = navigator.connection.type;
+	if (networkState == "none" ) {
+		isConnected = false;
+	}
+}
+
 $(document).ready(function() {
 	var parkID = 0;
 	var currentParkData;
 
 	$('#parkNamePage').on('pagecreate', function(event) {
 		var listHTML;
-		console.log("pagecreate event");
-		console.log($(document).width());
-	
+		
 		if ($(document).width() < 500 ) {
 			listHTML = Mustache.to_html(parklistTemplate, npsdata);
 		} else {
@@ -37,9 +52,19 @@ $(document).ready(function() {
 
 	$('#parkDetailsPage').on('pagebeforeshow', function(event) {
 		var parkDetailsHTML;
-		parkDetailsHTML = Mustache.to_html(parkDetailsTemplate, currentParkData);
+		
+		var detailsTemplate = parkDetailsTemplate;
+		if (isConnected) {
+			detailsTemplate += onlineMap;
+		} else {
+			detailsTemplate += offlineMap;
+		}
+		
+		parkDetailsHTML = Mustache.to_html(detailsTemplate, currentParkData);
 		$('#parkDetails').html(parkDetailsHTML);
+		$('parkMenu').listview('refresh');		
 	});
+
 
 	function getParkData(theID){
 		var theParkInfo;
