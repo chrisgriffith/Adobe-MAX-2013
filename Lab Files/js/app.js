@@ -52,15 +52,9 @@ $(document).ready(function() {
 
 	$('#parkDetailsPage').on('pagebeforeshow', function(event) {
 		var parkDetailsHTML;
+		currentParkData.isConnected = isConnected;
 		
-		var detailsTemplate = parkDetailsTemplate;
-		if (isConnected) {
-			detailsTemplate += onlineMap;
-		} else {
-			detailsTemplate += offlineMap;
-		}
-		
-		parkDetailsHTML = Mustache.to_html(detailsTemplate, currentParkData);
+		parkDetailsHTML = Mustache.to_html(parkDetailsTemplate, currentParkData, mapPartial);
 		$('#parkDetails').html(parkDetailsHTML);
 		$('parkMenu').listview('refresh');		
 	});
