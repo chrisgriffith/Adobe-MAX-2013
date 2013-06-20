@@ -6,6 +6,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 // PhoneGap is loaded and it is now safe to make calls Cordova methods
 function onDeviceReady() {
 	checkConnection();
+	
+	document.addEventListener("online", onOnline, false);
+	document.addEventListener("offline", onOffline, false);
 }
 
 function checkConnection() {
@@ -13,6 +16,14 @@ function checkConnection() {
 	if (networkState == "none" ) {
 		isConnected = false;
 	}
+}
+
+function onOnline(event){
+	isConnected = true;
+}
+
+function onOffline(event){
+	isConnected = false;
 }
 
 $(document).ready(function() {
@@ -35,7 +46,7 @@ $(document).ready(function() {
 		if ($(document).width() < 500 ) {
 			$('#parkList').delegate('li', 'tap', function(event){
 				parkID = event.currentTarget.id;
-				currentParkData =  getParkData(parkID);
+				currentParkData = getParkData(parkID);
 		
 				$('#parkList').undelegate('li', 'tap');
 				$('#parkList').listview('refresh');
